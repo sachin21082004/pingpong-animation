@@ -1,0 +1,79 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #536976;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #292E49, #536976);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #292E49, #536976); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.box{
+    height: 500px;
+    width: 800px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    position: relative;
+}
+.box::before{
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 0px;
+    height: 200px;
+    width: 50px;
+    background-color: black;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    
+    animation:  left 3s 2s  linear 10;
+}
+@keyframes left{
+    0%{transform: translateY(0);}
+    25%{transform: translateY(150px);}
+    50%{transform: translateY(0);}
+    75%{transform: translateY(-150px);}
+    100%{transform: translateY(0);}
+}
+.box::after{
+    content: "";
+    position: absolute;
+    top: 30%;
+    right: 0px;
+    height: 200px;
+    width: 50px;
+    background-color: black;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    animation: right 3s 1.4s linear 10;
+}
+@keyframes right{
+    0%{transform: translateY(0);}
+    25%{transform: translateY(150px);}
+    50%{transform: translateY(0);}
+    75%{transform: translateY(-150px);}
+    100%{transform: translateY(0);}
+}
+.ball{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: black;
+    animation: gindi 3s 1s linear 10;
+}
+@keyframes gindi{
+    0%{transform: translatex(0);}
+    25%{transform: translatex(310px);}
+    50%{transform: translatex(0);}
+    75%{transform: translatex(-310px);}
+    100%{transform: translatex(0);}
+
+}
